@@ -20,4 +20,19 @@
   - {name="test"} | decolorize
  
 - parsers
+  - json
+  - logfmt
+  - pattern
+  - regexp
+  - unpack (promtail...)
+ 
+- template functions
+  - label as variables  {{ .component }}
+  - access log line  {{ __line__ | lower }}
+  - access timestamp  {{ __timestamp__ | date "~~~" }}
+
+- log transforming
+  - line format => line_format "{{ .label }}"
+    {instance="test", service="test"} |= `sent` | json | regexp "(?P<method>sent) (?P<status>\\d+?) | line_format "{{.method}} {{.status}}"
+    
   
