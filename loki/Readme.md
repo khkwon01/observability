@@ -34,5 +34,38 @@
 - log transforming
   - line format => line_format "{{ .label }}"
     {instance="test", service="test"} |= `sent` | json | regexp "(?P<method>sent) (?P<status>\\d+?) | line_format "{{.method}} {{.status}}"
+
+- log aggregation
+  - rate(range)
+  - count_over_time(range)
+  - bytes_rate(range)
+  - bytes_over_time(range)
+  - absent_over_time(range)
+ 
+  ```
+  count_over_time({service="test"}[$__auto])
+  sum by (test) (rate({service=~".+test"} |= "error" [1m]))
+
+  sum by (org_id) (
+    sum_over_time(
+      {service="test"}
+         |= "test"
+         | logfmt
+         | unwrap bytes(bytes_processed) [1m])
+    )
+  )
+  ```
+
+- built-in aggregation
+  - sum, avg, min, max, stddev, stdvar, count, topk, bottommk, sort, sort_desc
+  ```
+  topk(10, sum(rate({service="test"}[10m])) by (name))
+  avg(rate(({service="test"} |= "GET" | json | path="/test")[10s])) by (region)
+  ```
+
+### 2. Architecture
+<img width="427" height="333" alt="image" src="https://github.com/user-attachments/assets/9fd106bc-80f1-454c-bc56-13e96957fd42" />
+
+  
     
   
