@@ -10,3 +10,15 @@
 
 ## source log format
 <img width="746" height="706" alt="image" src="https://github.com/user-attachments/assets/7bede0f1-b506-4353-a2ef-72737576fac9" />
+
+## monitoring four golden signals
+1. Latency
+   - The time taken to service a request  
+2. Traffic
+   - How much demand is placed on your system
+3. Errors
+   - The rate of requests that fail
+4. Saturation
+   - How full your system services are
+  
+<img width="637" height="291" alt="74" src="https://github.com/user-attachments/assets/9d874af2-33ab-4a00-8860-ff79101b9afb" />
