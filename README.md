@@ -22,3 +22,7 @@
    - How full your system services are
   
 <img width="637" height="291" alt="74" src="https://github.com/user-attachments/assets/9d874af2-33ab-4a00-8860-ff79101b9afb" />
+
+## RUM (real user monitoring)
+
+<img width="691" height="209" alt="image" src="https://github.com/user-attachments/assets/13a54215-01ba-46a6-b0ff-71a3c4c74b5e" />
