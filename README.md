@@ -26,3 +26,5 @@
 ## RUM (real user monitoring)
 
 <img width="691" height="209" alt="image" src="https://github.com/user-attachments/assets/13a54215-01ba-46a6-b0ff-71a3c4c74b5e" />
+
+<img width="711" height="792" alt="image" src="https://github.com/user-attachments/assets/7d01afc5-87a0-4173-b4ed-3d848f1a92ba" />
